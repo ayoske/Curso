@@ -1,21 +1,21 @@
-<h1>Nombre del héroe <small> Fecha de aparición: </small></h1>
+<h1>{{heroe.nombre}}<small> Fecha de aparición: {{heroe.aparicion}} </small></h1>
 <hr>
 
 <div class="row">
     <div class="col-md-4">
-        <img src="" alt="">
+        <img class="heroeBio animated fadeIn" [src]="heroe.img" [alt]="heroe.nombre">
         <br><br>
-        <a href="" class="btn btn-outline-danger btn-block">Regresar</a>
+        <button (click)="regresaHeroes()" class="btn btn-outline-danger btn-block" type="button">Regresar</button>
     </div>
 
-    <div class="col-md-8">
-        <h3>Nombre héroe</h3>
+    <div class="col-md-8 animated fadeIn">
+        <h3>{{heroe.nombre}}</h3>
         <hr>
         <p>
-            bio del heroe
+            {{heroe.bio}}
         </p>
         <div>
-            <img src="" alt="">
+            <img [src]="heroe.imgCasa" class="animated fadeIn"  [alt]="heroe.nombre">
         </div>
     </div>
 

@@ -29,7 +29,7 @@ export class HeroesService {
           img: 'assets/img/daredevil.png',
           aparicion: '1964-01-01',
           casa: 'Marvel',
-          imgCasa: 'assets/img/Marvel_Logo.jpg'
+          imgCasa: 'assets/img/Marvel-Logo.jpg'
         },
         {
           nombre: 'Hulk',
@@ -38,7 +38,7 @@ export class HeroesService {
           img: 'assets/img/hulk.png',
           aparicion: '1962-05-01',
           casa: 'Marvel',
-          imgCasa: 'assets/img/Marvel_Logo.jpg'
+          imgCasa: 'assets/img/Marvel-Logo.jpg'
         },
         {
           nombre: 'Linterna Verde',
@@ -56,7 +56,7 @@ export class HeroesService {
           img: 'assets/img/spiderman.png',
           aparicion: '1962-08-01',
           casa: 'Marvel',
-          imgCasa: 'assets/img/Marvel_Logo.jpg'
+          imgCasa: 'assets/img/Marvel-Logo.jpg'
         },
         {
           nombre: 'Wolverine',
@@ -65,7 +65,7 @@ export class HeroesService {
           img: 'assets/img/wolverine.png',
           aparicion: '1974-11-01',
           casa: 'Marvel',
-          imgCasa: 'assets/img/Marvel_Logo.jpg'
+          imgCasa: 'assets/img/Marvel-Logo.jpg'
         }
       ];
 
