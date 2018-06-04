@@ -80,6 +80,25 @@ export class HeroesService {
     getHeroe(idx) {
       return this.heroes[idx];
     }
+
+    buscarHeroe( termino: string) {
+
+      let heroesArr: Heroe[] = [];
+
+      termino = termino.toLowerCase();
+
+      for ( let heroe of this.heroes) {
+
+        let nombre: string = heroe.nombre.toLowerCase();
+
+        if (nombre.indexOf(termino) >= 0) {
+          heroesArr.push(heroe);
+          console.log('coincide');
+        }
+      }
+
+      return heroesArr;
+    }
 }
 
 export interface Heroe {
@@ -89,5 +108,4 @@ export interface Heroe {
     aparicion: string;
     casa: string;
     imgCasa: string;
-// tslint:disable-next-line:semicolon
-};
+}

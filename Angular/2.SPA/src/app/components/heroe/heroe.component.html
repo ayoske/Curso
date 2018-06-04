@@ -1,4 +1,4 @@
-<h1>{{heroe.nombre}}<small> Fecha de aparición: {{heroe.aparicion}} </small></h1>
+<h1>{{ heroe.nombre | uppercase }}<small> ( {{ heroe.aparicion | date: 'y' }} ) </small></h1>
 <hr>
 
 <div class="row">
@@ -15,7 +15,7 @@
             {{heroe.bio}}
         </p>
         <div>
-            <img [src]="heroe.imgCasa" class="animated fadeIn"  [alt]="heroe.nombre">
+            <img [src]="heroe.imgCasa" class="animated fadeIn" [alt]="heroe.nombre">
         </div>
     </div>
 
