@@ -87,13 +87,15 @@ export class HeroesService {
 
       termino = termino.toLowerCase();
 
-      for ( let heroe of this.heroes) {
+      for ( let i = 0; i < this.heroes.length; i++ ) {
+        
+        let heroe = this.heroes[i];
 
         let nombre: string = heroe.nombre.toLowerCase();
 
         if (nombre.indexOf(termino) >= 0) {
+          heroe.idx = i;
           heroesArr.push(heroe);
-          console.log('coincide');
         }
       }
 
@@ -108,4 +110,5 @@ export interface Heroe {
     aparicion: string;
     casa: string;
     imgCasa: string;
+    idx?: number;
 }

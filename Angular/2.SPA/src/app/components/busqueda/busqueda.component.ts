@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HeroesService, Heroe } from '../../services/heroes.service';
 
@@ -10,7 +10,8 @@ import { HeroesService, Heroe } from '../../services/heroes.service';
 
 export class BusquedaComponent implements OnInit {
 
-  heroes: any;
+  @Input() heroes: any;
+  @Input() index;
   heroesArr: any = [];
   termino: any;
 
@@ -35,8 +36,8 @@ export class BusquedaComponent implements OnInit {
     this.heroes = this._heroesService.getHeroes();
   }
 
-  verHeroe(idx: number) {
-    this.router.navigate(['/heroe', idx]);
+  verHeroe() {
+    this.router.navigate(['/heroe', this.index]);
   }
 
 }
