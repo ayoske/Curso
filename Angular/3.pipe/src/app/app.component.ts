@@ -10,6 +10,7 @@ import { resolve, reject } from 'q';
 export class AppComponent {
 
   nombre = 'Armando';
+  nombre2 = 'ArmAndo JaviEr naVaaRRo piNeDA';
 
   arreglo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -35,5 +36,7 @@ export class AppComponent {
   });
 
   fecha = new Date();
+
+
 
 }
