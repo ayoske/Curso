@@ -10,7 +10,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 // Rutas
 import { Route } from './app.routes';
 import { RouterModule } from '@angular/router';
-import { HttpClient } from 'selenium-webdriver/http';
+
+// Servicios
 
 
 @NgModule({
@@ -23,8 +24,7 @@ import { HttpClient } from 'selenium-webdriver/http';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot( Route, {useHash: true}),
-    HttpClient
+    RouterModule.forRoot( Route, {useHash: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
