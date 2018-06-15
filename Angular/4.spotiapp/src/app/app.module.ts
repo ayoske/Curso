@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -24,7 +25,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot( Route, {useHash: true})
+    RouterModule.forRoot( Route, {useHash: true}),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
