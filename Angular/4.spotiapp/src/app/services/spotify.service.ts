@@ -9,23 +9,28 @@ export class SpotifyService {
 
   constructor( private http: HttpClient) { }
 
-  getQuery( query: string ) {
+  // Función para hacer peticion al servicio de spotify
+  getQuerySpotify( query: string ) {
 
     const url = 'https://api.spotify.com/v1/';
 
     const headers: HttpHeaders = new HttpHeaders({
-      'Authorization': 'Bearer BQAwqZUDkhC7Z1Axe1UeG9jrvXfrsmWzQoVBAIAleRNBDnviLwwniO1zgfs4YgDwrdKcI-FkHkjRZc3z-Hg'
+      'Authorization': 'Bearer BQDArLe8NfcI6jtH_duNAZIJoacUiD7ASHCDfApLRcmxMx4OrzoW4MUFhEJWMJT_fQvIGZGwV62xAIYetQA'
      });
 
+     // Retorna la respuesta del get con la url de spotify
      return this.http.get( url + query, { headers });
 
   }
 
+  // Funciones para obtener datos del servicio ( Observadores )
   getNewRelease() {
-    return this.getQuery('browse/new-releases').pipe( map( data => data['albums'].items));
+    // Retorna el resultado del query con el filtro para solo obtener solo el objeto albmums
+    return this.getQuerySpotify('browse/new-releases').pipe( map( data => data['albums'].items));
   }
 
   getArtista(termino: string) {
-   return this.getQuery(`search?q=${ termino }&type=artist&limit=15`).pipe( map( data => data['artists'].items ));
+    // Retorna el resultado del query con el filtro para solo obtener solo el objeto artists
+   return this.getQuerySpotify(`search?q=${ termino }&type=artist&limit=15`).pipe( map( data => data['artists'].items ));
   }
 }

@@ -12,9 +12,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { Route } from './app.routes';
 import { RouterModule } from '@angular/router';
 import { NoimagePipe } from './pipes/noimage.pipe';
-
-// Servicios
-
+import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +21,8 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     SearchComponent,
     ArtistComponent,
     NavbarComponent,
-    NoimagePipe
+    NoimagePipe,
+    TarjetaComponent
   ],
   imports: [
     BrowserModule,
