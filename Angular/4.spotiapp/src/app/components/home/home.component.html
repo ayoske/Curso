@@ -1,1 +1,2 @@
-<app-tarjeta [items]="nuevasCanciones"></app-tarjeta>
+<app-loading class="m-5" *ngIf="loading"></app-loading>
+<app-tarjeta class="animated fadeIn m-5" [items]="nuevasCanciones"></app-tarjeta>
