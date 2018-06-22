@@ -15,7 +15,7 @@ export class SpotifyService {
     const url = 'https://api.spotify.com/v1/';
 
     const headers: HttpHeaders = new HttpHeaders({
-      'Authorization': 'Bearer BQAmMzv1oI0sky4YYq09q6C6GC65M0iSHgKhvJo0YIf5nDfTwI0B33r5C_LfQHF35e3ZZ-V4tJcZYbHKPlU'
+      'Authorization': 'Bearer BQAlPLpuh_7dBYbyyg48GPvXTi5_if_M3kaImuvioqjaHcixX6qaHQEyU_cZe_TV4Cyb_LzYhFJwhL66N8U'
      });
 
      // Retorna la respuesta del get con la url de spotify
@@ -38,5 +38,10 @@ export class SpotifyService {
     // Retorna el resultado del query
    return this.getQuerySpotify(`artists/${ id }`);
    /* .pipe( map( data => data['artists'].items )); */
+  }
+
+  getTopTracks(id: any) {
+    // Retorna el resultado del query, lleva pipe por que necesitamos tracks, pero como track es arreglo [] no lleva "."
+   return this.getQuerySpotify(`artists/${id}/top-tracks?country=es`).pipe( map( data => data['tracks']));
   }
 }
