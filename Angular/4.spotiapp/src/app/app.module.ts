@@ -11,9 +11,12 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 // Rutas
 import { Route } from './app.routes';
 import { RouterModule } from '@angular/router';
-import { NoimagePipe } from './pipes/noimage.pipe';
 import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+
+// Pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { DomseguroSpotyPipe } from './pipes/domseguro.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     NavbarComponent,
     NoimagePipe,
     TarjetaComponent,
-    LoadingComponent
+    LoadingComponent,
+    DomseguroSpotyPipe
   ],
   imports: [
     BrowserModule,
