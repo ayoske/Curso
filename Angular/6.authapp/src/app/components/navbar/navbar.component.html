@@ -15,6 +15,7 @@
                 <a class="nav-link" [routerLink]="['protegida']">Protegida</a>
             </li>
         </ul>
-        <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+        <button type="button" class="btn btn-primary btn-sm" (click)="login()" *ngIf="!auth.isAuthenticated()">Login</button>
+        <button type="button" class="btn btn-primary btn-sm" (click)="salir()" *ngIf="auth.isAuthenticated()">Salir</button>
     </div>
 </nav>
